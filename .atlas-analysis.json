@@ -1,0 +1,129 @@
+{
+  "projectType": "sdk-library",
+  "projectName": "Laravel MercadoPago",
+  "projectDescription": "Laravel package for integrating Mercado Pago payment gateway with reusable services and demo endpoints",
+  "theme": "palm",
+  "primaryColor": "#009EE3",
+  "lightColor": "#00B1EB",
+  "darkColor": "#0082C3",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction",
+              "installation",
+              "configuration"
+            ]
+          },
+          {
+            "group": "Core Concepts",
+            "pages": [
+              "concepts/architecture",
+              "concepts/services",
+              "concepts/credentials"
+            ]
+          },
+          {
+            "group": "Guides",
+            "pages": [
+              "guides/quickstart",
+              "guides/creating-preferences",
+              "guides/processing-payments",
+              "guides/handling-webhooks",
+              "guides/managing-customers",
+              "guides/refunds",
+              "guides/testing"
+            ]
+          },
+          {
+            "group": "Deployment",
+            "pages": [
+              "deployment/production",
+              "deployment/security"
+            ]
+          },
+          {
+            "group": "Troubleshooting",
+            "pages": [
+              "troubleshooting/common-issues",
+              "troubleshooting/debugging"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "API Reference",
+        "groups": [
+          {
+            "group": "Services",
+            "pages": [
+              "api/preference-service",
+              "api/payment-service",
+              "api/customer-service",
+              "api/card-service",
+              "api/refund-service",
+              "api/payment-method-service",
+              "api/webhook-service",
+              "api/test-user-service"
+            ]
+          },
+          {
+            "group": "Demo Endpoints",
+            "pages": [
+              "api/endpoints/preferences",
+              "api/endpoints/payments",
+              "api/endpoints/customers",
+              "api/endpoints/webhooks",
+              "api/endpoints/payment-methods",
+              "api/endpoints/test-users"
+            ]
+          },
+          {
+            "group": "Configuration",
+            "pages": [
+              "api/configuration"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "Laravel 12 auto-discovery integration",
+    "Reusable services for preferences, payments, refunds, customers, and cards",
+    "HMAC webhook signature validation",
+    "Demo JSON endpoints for development and testing",
+    "Environment-based configuration",
+    "Support for Mercado Pago SDK v3.8+",
+    "Test user creation for QA automation",
+    "Payment method listing"
+  ],
+  "publicApiSurface": [
+    "PreferenceService::create()",
+    "PaymentService::create()",
+    "PaymentService::get()",
+    "RefundService::create()",
+    "CustomerService::create()",
+    "CustomerService::get()",
+    "CardService::create()",
+    "CardService::delete()",
+    "PaymentMethodService::all()",
+    "WebhookService::handle()",
+    "TestUserService::create()",
+    "POST /api/mercadopago/preferences",
+    "POST /api/mercadopago/payments",
+    "GET /api/mercadopago/payments/{id}",
+    "POST /api/mercadopago/payments/{id}/refunds",
+    "POST /api/mercadopago/customers",
+    "GET /api/mercadopago/customers/{id}",
+    "POST /api/mercadopago/customers/{id}/cards",
+    "DELETE /api/mercadopago/customers/{customerId}/cards/{cardId}",
+    "POST /api/mercadopago/webhooks",
+    "GET /api/mercadopago/payment-methods",
+    "POST /api/mercadopago/test-users"
+  ]
+}
